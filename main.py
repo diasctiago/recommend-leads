@@ -13,14 +13,14 @@ def main():
     st.title('AceleraDev Data Science 2020')
     st.subheader('**Recommend leads**')
     #Leitura dos dados
-    m1 = pd.read_csv('data\market1.csv')
-    m2 = pd.read_csv('data\market2.csv')
-    m3 = pd.read_csv('data\market3.csv')
+    m1 = pd.read_csv('data\\market1.csv')
+    m2 = pd.read_csv('data\\market2.csv')
+    m3 = pd.read_csv('data\\market3.csv')
     m4 = pd.read_csv('data\market4.csv')
     df = m1.append(m2).append(m3).append(m4)
-    df1 = pd.read_csv('data\port1.csv')
-    df2 = pd.read_csv('data\port2.csv')
-    df3 = pd.read_csv('data\port3.csv')
+    df1 = pd.read_csv('data\\port1.csv')
+    df2 = pd.read_csv('data\\port2.csv')
+    df3 = pd.read_csv('data\\port3.csv')
     
     # Filtrando df
     base = ['id','idade_empresa_anos','qt_filiais','fl_me','fl_sa','fl_epp','fl_mei',
