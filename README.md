@@ -1,2 +1,2 @@
 # recommend-leads
-diasctiago/recommend_leads
+Recomendação de leads utilizando K-means
