@@ -76,7 +76,6 @@ pydeck==0.3.0
 Pygments==2.5.2
 PyInstaller==3.5
 pyparsing==2.4.2
-pypiwin32==223
 pyrsistent==0.15.7
 python-dateutil==2.8.0
 pytz==2019.3
