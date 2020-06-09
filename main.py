@@ -14,7 +14,7 @@ def main():
     st.subheader('**Recommend leads**')
     #Leitura dos dados
     df1 = pd.read_csv('port1.csv')
-    df2 = pd.read_csv('\app\data\port2.csv')
+    df2 = pd.read_csv('./data/port2.csv')
     m1 = pd.read_csv('./data\market1.csv')
     m2 = pd.read_csv('./data\market2.csv')
     m3 = pd.read_csv('./data\market3.csv')
