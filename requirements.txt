@@ -47,12 +47,6 @@ jupyter-client==6.0.0
 jupyter-core==4.6.3
 jupyterlab==2.0.0
 jupyterlab-server==1.0.7
-Kivy==1.11.1
-kivy-deps.angle==0.2.0
-kivy-deps.glew==0.2.0
-kivy-deps.gstreamer==0.2.0
-kivy-deps.sdl2==0.2.0
-Kivy-Garden==0.1.4
 kiwisolver==1.1.0
 loguru==0.4.1
 MarkupSafe==1.1.1
