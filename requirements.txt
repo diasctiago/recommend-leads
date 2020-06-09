@@ -91,6 +91,7 @@ Send2Trash==1.5.0
 six==1.12.0
 sklearn==0.0
 soupsieve==1.9.5
+squarify==0.4.3
 sqlparse==0.3.0
 statsmodels==0.11.1
 streamlit==0.57.3
