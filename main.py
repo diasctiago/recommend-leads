@@ -1,7 +1,9 @@
 import streamlit as st
+import altair as alt
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import squarify as sqy
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
 from sklearn.cluster import KMeans
@@ -9,7 +11,7 @@ import warnings
 warnings.simplefilter(action = 'ignore')
 
 def main():
-    #st.image('codenationTD.png',format='PNG')
+    st.image('img/codenationTD.png', format='PNG')
     st.title('AceleraDev Data Science 2020')
     st.subheader('**Recommend leads**')
     #Leitura dos dados
@@ -81,7 +83,32 @@ def main():
     st.markdown('**Resumo dos Leads e variáveis disponívies**')
     st.dataframe(df_port.head())
     st.markdown('**Analise Gráfica dos Leds**')
+    if st.checkbox("Leads por UF"):
+        sns.catplot(x="sg_uf", 
+                    kind="count", 
+                    palette="ch:.25", 
+                    data=df_port)
+        plt.title('Quantidade de Leads por UF')
+        plt.xlabel('UF')
+        plt.ylabel('Qdt Leads')
+        #plt.legend()
+        st.pyplot()
+    if st.checkbox("Leads por Setor"):
+        treemap = df_port['setor'].value_counts()
+        sizes = treemap.values
+        label = treemap.index
+        sqy.plot(sizes=sizes, label=label, alpha=.8 )
+        plt.axis('off')
+        st.pyplot()
     st.markdown('**Seleção de Leads por Filtro**')
+    if st.checkbox("Seleção de Leads"):
+        colunas = list(df.columns)
+        opcao = st.selectbox('As colunas utilizadas para filtro', colunas)
+        filtros = list(df_port[opcao].unique())
+        selecao = st.selectbox('As colunas utilizadas para filtro', filtros)
+        df_filter = df_port.loc[df_port[opcao] == selecao]
+        head = st.slider('Quantos Leads?', 0, 100, 10)
+        st.dataframe(df_filter.head(head))
 
 if __name__ == '__main__':
     main()
