@@ -18,6 +18,9 @@ As bases de portfólio poderão ser utilizadas para testar a aderência da solu�
 
 ## Requisitos técnicos obrigatórios
 Utilizar técnicas de data science e machine learning para desenvolver o projeto;
+
 Apresentar o desenvolvimento e outputs do modelo em um Jupyter Notebook ou outra tecnologia de apresentação de Output de modelos de Machine Learning;
+
 A análise deve considerar os seguintes pontos: análise exploratória dos dados, tratamento dos dados, avaliação de algoritmos, treinamento do modelo, avaliação de performance do modelo e visualização dos resultados;
+
 Para a apresentação do projeto, o tempo entre o treinamento do modelo e o output deve ser menor que 20 min.
